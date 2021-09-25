@@ -1,0 +1,206 @@
+<div class="container-fluid bg-color p-4">
+  <div class="row">
+    <div class="col-6">
+      <img src="/assets/brandlogo.svg" class="img-fluid" alt="">
+
+    </div>
+    <div class="col-6">
+      <button class="btn-custom notmobile f-right" (click)="openModal()" *ngIf="NotPlay">
+        <svg width="181" height="52" viewBox="0 0 181 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="5" width="176" height="47" fill="#F22FB0" />
+          <rect x="1" y="1" width="174" height="45" fill="#E1FF28" stroke="black" stroke-width="2" />
+          <path
+            d="M75.184 25.832H73.392V29H71.184V18.12H75.184C77.7653 18.12 79.056 19.3787 79.056 21.896C79.056 23.1653 78.7253 24.1413 78.064 24.824C77.4133 25.496 76.4533 25.832 75.184 25.832ZM73.392 23.944H75.168C76.2667 23.944 76.816 23.2613 76.816 21.896C76.816 21.224 76.6827 20.744 76.416 20.456C76.1493 20.1573 75.7333 20.008 75.168 20.008H73.392V23.944ZM87.2779 29H81.0859V18.12H83.2939V27.048H87.2779V29ZM88.2007 29L90.6487 18.12H94.8407L97.2887 29H95.0807L94.6487 27.032H90.8407L90.4087 29H88.2007ZM92.3607 19.944L91.2567 25.112H94.2327L93.1287 19.944H92.3607ZM102.758 29H100.55V24.6L97.19 18.12H99.638L101.638 22.456L103.638 18.12H106.086L102.758 24.6V29Z"
+            fill="#1C1C1C" />
+        </svg>
+      </button>
+
+      <button class="f-right notmobile c-btn" *ngIf="!NotPlay">
+        <span class="c-s"> Connected at</span>
+
+        <img [src]="selectiIcon" class="img-fluid" alt="">
+
+      </button>
+      <button class="btn-custom notmobile f-right challegesbtn right">
+        Challenges
+      </button>
+
+
+      <!-- mobile  -->
+      <button class="mobile-btn" (click)="openModal3()">
+        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 1.35714C0 0.962653 0.319797 0.642857 0.714286 0.642857H19.2857C19.6802 0.642857 20 0.962653 20 1.35714C20 1.75163 19.6802 2.07143 19.2857 2.07143H0.714285C0.319796 2.07143 0 1.75163 0 1.35714Z" fill="#E1FF28"/>
+          <path d="M5.71429 8.5C5.71429 8.10551 6.03408 7.78571 6.42857 7.78571H19.2857C19.6802 7.78571 20 8.10551 20 8.5C20 8.89449 19.6802 9.21428 19.2857 9.21428H6.42857C6.03408 9.21428 5.71429 8.89449 5.71429 8.5Z" fill="#E1FF28"/>
+          <path d="M12.8571 15.6429C12.8571 15.2484 13.1769 14.9286 13.5714 14.9286H19.2857C19.6802 14.9286 20 15.2484 20 15.6429C20 16.0373 19.6802 16.3571 19.2857 16.3571H13.5714C13.1769 16.3571 12.8571 16.0373 12.8571 15.6429Z" fill="#E1FF28"/>
+          </svg>
+
+      </button>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ist model  -->
+<div class="modal " tabindex="-1" role="dialog" [ngStyle]="{'display':display}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content p-4 main-model">
+      <div class="modal-body">
+        <button type="button" class="close" aria-label="Close" (click)="onCloseHandled()"><span class="bg-w" aria-hidden="true">&times;</span></button>
+
+        <!-- installed avaliable  -->
+        <div class="row">
+          <p class="main-h">Connect Wallet</p>
+        </div>
+        <div class="row">
+          <p class="sub-h">Installed Wallets</p>
+        </div>
+        <div class="row pt-2 pb-2 row-border" *ngFor="let wallet of InstalledWallets">
+          <div class="col-6">
+            <img [src]="wallet.icon" alt="" class="img-fluid icon-img">
+            <span class="connectName">{{wallet.name}}</span>
+          </div>
+          <div class="col-6">
+            <button class="connectbtn f-right" (click)="OpenConnectModel(wallet)">
+              Connect
+            </button>
+          </div>
+        </div>
+        <!-- avaliable connect  -->
+        <div class="row mt-4">
+          <p class="sub-h">Avaliable Wallets</p>
+        </div>
+        <div class="row pt-2 pb-2 row-border" *ngFor="let wallet of avaliableWallets">
+          <div class="col-6">
+            <img [src]="wallet.icon" alt="" class="img-fluid icon-img">
+            <span class="connectName">{{wallet.name}}</span>
+          </div>
+          <div class="col-6">
+            <button class=" btn-s f-right">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0)">
+                <path d="M15.3969 0H11.0351C10.7021 0 10.4321 0.269937 10.4321 0.603031C10.4321 0.936094 10.7021 1.20603 11.0351 1.20603H14.7939V4.96481C14.7939 5.29787 15.0638 5.56781 15.3969 5.56781C15.73 5.56781 15.9999 5.29787 15.9999 4.96481V0.603031C15.9999 0.269937 15.73 0 15.3969 0Z" fill="#E1FF28"/>
+                <path d="M15.8233 0.176695C15.5877 -0.0588984 15.2062 -0.0588984 14.9706 0.176695L6.36761 8.7797C6.13202 9.01507 6.13202 9.39698 6.36761 9.63235C6.48521 9.75013 6.63958 9.80904 6.79396 9.80904C6.94811 9.80904 7.10249 9.75013 7.2203 9.63235L15.8233 1.02935C16.0589 0.793977 16.0589 0.41207 15.8233 0.176695Z" fill="#E1FF28"/>
+                <path d="M13.3468 7.49751C13.0137 7.49751 12.7437 7.76745 12.7437 8.10051V14.794H1.20603V3.25629H7.8995C8.23256 3.25629 8.5025 2.98636 8.5025 2.65329C8.5025 2.32023 8.23256 2.05026 7.8995 2.05026H0.603031C0.269938 2.05026 0 2.3202 0 2.65329V15.397C0 15.7301 0.269938 16 0.603031 16H13.3468C13.68 16 13.9497 15.7301 13.9497 15.397V8.10051C13.9497 7.76745 13.6798 7.49751 13.3468 7.49751Z" fill="#E1FF28"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- 2nd model  -->
+<div class="modal " tabindex="-1" role="dialog" [ngStyle]="{'display':display1}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content p-4 main-model">
+      <div class="modal-body">
+        <button type="button" class="close" aria-label="Close" (click)="onCloseHandled2()"><span class="bg-w"  aria-hidden="true">&times;</span></button>
+
+        <div class="row center">
+            <img src="/assets/connect.svg" class="img-fluid" alt="">
+        </div>
+
+        <!-- disccount  -->
+        <div class="row pt-2 pb-2 row-border" >
+          <div class="col-6">
+            <img [src]="selectiIcon" alt="" class="img-fluid icon-img">
+            <span class="connectName">{{selectName}}</span>
+          </div>
+          <div class="col-6">
+            <button class="connectbtn2 f-right" (click)="disconnect()">
+              disconnect
+            </button>
+          </div>
+        </div>
+        <!-- address  -->
+        <div class="row mt-4">
+          <p class="address pb-0 mb-0">Address</p>
+          <p class="location">Dkas’14i032¡9sadkaleo09205’aksdjf8920025’aksdjf892002sadka
+          </p>
+
+        </div>
+
+        <!-- save  -->
+        <div class="row mt-4">
+          <div class="col-8 p-0">
+            <p class="address p-0 m-0">Save as preferred wallet?
+            </p>
+            <p class="location">Allows to auto connect to the wallet
+            </p>
+          </div>
+          <div class="col-4 end">
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider round"></span>
+            </label>
+
+          </div>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3rd model  -->
+
+
+
+<!-- 2nd model  -->
+<div class="modal " tabindex="-1" role="dialog" [ngStyle]="{'display':display2}">
+  <div class="modal-dialog m-0" role="document">
+    <div class="modal-content extra-vh p-4 main-model">
+      <div class="modal-body">
+        <div class="row end mb-5">
+          <button class="cross-btn" (click)="onCloseHandled3()">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.13826 17.3759C0.8198 17.0575 0.8198 16.5412 1.13826 16.2227L16.1303 1.23066C16.4488 0.912199 16.9651 0.9122 17.2835 1.23066C17.602 1.54911 17.602 2.06543 17.2835 2.38389L2.29149 17.3759C1.97303 17.6944 1.45671 17.6944 1.13826 17.3759Z" fill="#E1FF28"/>
+              <path d="M1.61594 1.23066C1.9344 0.9122 2.45072 0.9122 2.76918 1.23066L17.7612 16.2227C18.0797 16.5412 18.0797 17.0575 17.7612 17.3759C17.4428 17.6944 16.9265 17.6944 16.608 17.3759L1.61594 2.38389C1.29749 2.06543 1.29749 1.54911 1.61594 1.23066Z" fill="#E1FF28"/>
+              </svg>
+          </button>
+        </div>
+        <div class="row mt-5 mb-5 center">
+          <h5 class="home-btn" [routerLink]="['/']" routerLinkActive="router-link-active" >Home</h5>
+
+        </div>
+        <div class="row mt-5 mb-5 center">
+          <h5 class="home-btn" >Challenges</h5>
+
+        </div>
+        <div class="row mt-5 center">
+          <button class="btn-custom f-right" (click)="openModal()" *ngIf="NotPlay">
+            <svg width="181" height="52" viewBox="0 0 181 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="5" y="5" width="176" height="47" fill="#F22FB0" />
+              <rect x="1" y="1" width="174" height="45" fill="#E1FF28" stroke="black" stroke-width="2" />
+              <path
+                d="M75.184 25.832H73.392V29H71.184V18.12H75.184C77.7653 18.12 79.056 19.3787 79.056 21.896C79.056 23.1653 78.7253 24.1413 78.064 24.824C77.4133 25.496 76.4533 25.832 75.184 25.832ZM73.392 23.944H75.168C76.2667 23.944 76.816 23.2613 76.816 21.896C76.816 21.224 76.6827 20.744 76.416 20.456C76.1493 20.1573 75.7333 20.008 75.168 20.008H73.392V23.944ZM87.2779 29H81.0859V18.12H83.2939V27.048H87.2779V29ZM88.2007 29L90.6487 18.12H94.8407L97.2887 29H95.0807L94.6487 27.032H90.8407L90.4087 29H88.2007ZM92.3607 19.944L91.2567 25.112H94.2327L93.1287 19.944H92.3607ZM102.758 29H100.55V24.6L97.19 18.12H99.638L101.638 22.456L103.638 18.12H106.086L102.758 24.6V29Z"
+                fill="#1C1C1C" />
+            </svg>
+          </button>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

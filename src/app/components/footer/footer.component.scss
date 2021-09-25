@@ -1,0 +1,143 @@
+.main-h {
+  width: 1003.36px;
+height: 44.89px;
+left: 218.32px;
+top: 2217.86px;
+
+background: #F22FB0;
+}
+.bg-color {
+  background: #0E0E0E;
+}
+.des {
+  font-family: Titillium Web;
+font-style: normal;
+font-weight: 300;
+font-size: 24px;
+line-height: 42px;
+/* or 175% */
+
+text-align: center;
+letter-spacing: 0.03em;
+
+/* Black/Black 100 */
+
+color: #DEDEDE;
+}
+.play {
+  background: none;
+  border: none;
+}
+.img2 {
+  position: absolute;
+  bottom: -5rem;
+}
+.box {
+  position: relative;
+}
+.footerlogo {
+  justify-content: flex-end;
+    display: flex;
+    padding-right: 8rem;
+}
+.specific-height {
+  height: 5rem;
+  background: #1B1B1B;
+}
+.center {
+  justify-content: center;
+}
+.button{
+  background: linear-gradient(
+    -24deg, #1B1B1B 50%, transparent 50%);
+}
+.postion-s {
+  position: absolute;
+  height: 46rem;
+  top: -220px;
+}
+.position-r {
+  position: relative;
+}
+.img-index {
+  z-index: 111;
+}
+.fucking {
+  color: #F22FB0;
+  /* font-family: Titillium Web; */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 84px;
+}
+.img3 {
+  position:absolute;
+  left:  180px;
+  top: -268px;
+  position: absolute;
+}
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .sub-heading {
+    position: inherit;
+    top: 26px;
+    left: 9px;
+  }
+  .notmobile {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .fucking {
+    color: #F22FB0;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    text-align: center;
+  }
+  .des {
+    font-family: Titillium Web;
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 28px;
+/* or 175% */
+
+text-align: center;
+letter-spacing: 0.03em
+  }
+  .hole {
+font-style: normal;
+font-weight: normal;
+font-size: 81px;
+line-height: 100px;
+/* or 123% */
+
+text-align: right;
+
+/* White */
+
+color: #FFFFFF;
+
+opacity: 0.2;
+z-index: 1111;
+  }
+  .img2 {
+    position: absolute;
+    top: -17rem;
+    width: 17rem;
+  }
+  .img3 {
+    left: 74px;
+    top: -253px;
+    position: absolute;
+    width: 3rem;
+  }
+  .footerlogo {
+    justify-content: center;
+    display: flex;
+    padding-right: 0;
+  }
+}

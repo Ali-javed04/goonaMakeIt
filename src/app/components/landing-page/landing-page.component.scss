@@ -1,0 +1,77 @@
+.bg-color {
+  background: #171717;
+}
+.main-heading {
+  position: relative;
+}
+.sub-heading {
+  position: absolute;
+  bottom: 0;
+  right: -2rem;
+
+
+}
+.f-right {
+  float: right;
+}
+.bona2 {
+  position: relative;
+}
+.img2 {
+  position: absolute;
+  top: 6rem;
+}
+.display-right {
+  justify-content: flex-end;
+    display: flex;
+    position: relative;
+}
+.hand {
+  position: absolute;
+
+}
+.mobile {
+  display: none;
+}
+.specific-height {
+  height: 5rem;
+}
+@media screen and (max-width: 600px) {
+  .sub-heading {
+    position: inherit;
+    top: 26px;
+    left: 9px;
+  }
+  .notmobile {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .p-a {
+    position: absolute;
+    left: 0;
+    height: 4rem;
+    width: 4rem;
+  }
+  .b-a {
+    top: 11rem;
+    left: -2rem
+  }
+  .t-a {
+    top: 11rem;
+    left: 4rem;
+  }
+  .a-a {
+    bottom: 2rem;
+    left: 2rem;
+  }
+  .d-a {
+    top: 5rem;
+    left: 6rem;
+
+  }
+  .s-a {
+    left: 13rem;
+  }
+}

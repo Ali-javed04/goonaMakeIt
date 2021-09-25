@@ -1,0 +1,290 @@
+.bg-color {
+  background: #171717;
+}
+.btn-custom {
+  background: none;
+  border: none;
+}
+.f-right {
+  float: right;
+}
+.right {
+  margin-right: 4rem;
+    margin-top: 1rem;
+}
+.challegesbtn {
+  font-family: Titillium Web;
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 175% */
+
+letter-spacing: 0.03em;
+
+/* Black/Black 100 */
+
+color: #DEDEDE;
+}
+.modal{
+  background: rgba(16, 16, 16, 0.3);
+  backdrop-filter: blur(20px);
+}
+
+.main-model {
+  background: #1B1B1B;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 8px;
+}
+.connectbtn {
+  font-family: Titillium Web;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 175% */
+
+
+/* Black/Black 400 */
+
+color: #1B1B1B;
+background:#E1FF28 ;
+border: none;
+padding: 2px 15px;
+}
+.connectName {
+  font-family: Titillium Web;
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 26px;
+/* identical to box height, or 186% */
+
+
+/* White */
+
+color: #FFFFFF;
+}
+.connectbtn2 {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  /* identical to box height, or 175% */
+
+
+  /* Black/Black 400 */
+
+  color: #1B1B1B;
+  background:#707070 ;
+  border: none;
+  padding: 2px 15px;
+  }
+  .connectName {
+    font-family: Titillium Web;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 26px;
+  /* identical to box height, or 186% */
+
+
+  /* White */
+
+  color: #FFFFFF;
+}
+.main-h {
+  font-family: Titillium Web;
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 48px;
+/* identical to box height, or 150% */
+
+
+color: #FFFFFF;
+}
+.sub-h {
+  font-family: Titillium Web;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 175% */
+
+
+/* Black/Black 200 */
+
+color: #707070;
+}
+.icon-img {
+  border-radius: 50%;
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+.f-right {
+  float: right;
+}
+.row-border {
+  border-bottom: 1px solid #2E2E2E;
+
+}
+.btn-s {
+  background: transparent;
+  border: none;
+  padding-right: 30px;
+}
+.center {
+  justify-content: center;
+}
+.address {
+  font-family: Titillium Web;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 175% */
+
+
+/* White */
+
+color: #FFFFFF;
+}
+.location {
+  font-family: Titillium Web;
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 175% */
+
+letter-spacing: 0.03em;
+overflow: hidden;
+/* Black/Black 100 */
+
+color: #DEDEDE;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #E1FF28;
+  opacity: 0.2;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #1b1b1b;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #E1FF28;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #E1FF28;
+
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.end {
+  justify-content: flex-end;
+    display: flex;
+
+}
+.bg-w {
+  color:white;
+}
+.c-btn {
+  background: #FFFFFF;
+ opacity: 0.5;
+ border-radius: 2px;
+ padding: 10px 20px;
+ font-family: Titillium Web;
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 175% */
+
+letter-spacing: 0.03em;
+
+/* Brand/Green Punkie */
+
+}
+.c-s {
+  color: #28FF7E;
+}
+.mobile-btn {
+  display:none
+}
+.extra-vh {
+  height: 100vh;
+}
+.cross-btn {
+  background: transparent;
+  border:none;
+  float: right;
+}
+.end {
+  justify-content: end;
+}
+.home-btn {
+  font-family: Titillium Web;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+justify-content: center;
+color:white
+}
+@media screen and (max-width: 600px) {
+  .notmobile {
+    display: none
+  }
+  .mobile-btn {
+    display: block;
+    float: right;
+    background: transparent;
+    border: none;
+  }
+}
